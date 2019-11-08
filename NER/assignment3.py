@@ -259,7 +259,7 @@ def vanilla_rnn(max_len,embedding_matrix):
     print(model.summary())
     return model
 
-# Keras vanilla lstm model
+# Keras lstm model
 def lstm_model(max_len,embedding_matrix):
     #Create vannila rnn model
     model = Sequential()
@@ -275,9 +275,8 @@ def lstm_model(max_len,embedding_matrix):
     print(model.summary())
     return model
 
-# Keras vanilla gru model
+# Keras gru model
 def gru_model(max_len,embedding_matrix):
-    #Create vannila rnn model
     model = Sequential()
     model.add(InputLayer(input_shape=(max_len, )))
     model.add(Embedding(len(vocab), 300))
@@ -291,9 +290,8 @@ def gru_model(max_len,embedding_matrix):
     print(model.summary())
     return model
 
-# Keras vanilla bi-directional rnn model
+# Keras bi-directional rnn model
 def Bidirectional_rnn(max_len,embedding_matrix):
-    #Create vannila rnn model
     model = Sequential()
     model.add(InputLayer(input_shape=(max_len, )))
     model.add(Embedding(len(vocab), 300))
@@ -307,9 +305,8 @@ def Bidirectional_rnn(max_len,embedding_matrix):
     print(model.summary())
     return model
 
-# Keras vanilla bi-directional LSTM model
+# Keras bi-directional LSTM model
 def Bidirectional_LSTM(max_len,embedding_matrix):
-    #Create vannila rnn model
     model = Sequential()
     model.add(InputLayer(input_shape=(max_len, )))
     model.add(Embedding(len(vocab), 300))
@@ -323,9 +320,8 @@ def Bidirectional_LSTM(max_len,embedding_matrix):
     print(model.summary())
     return model
 
-# Keras vanilla bi-directional GRU model
+# Keras bi-directional GRU model
 def Bidirectional_GRU(max_len,embedding_matrix):
-    #Create vannila rnn model
     model = Sequential()
     model.add(InputLayer(input_shape=(max_len, )))
     model.add(Embedding(len(vocab), 300))
@@ -340,9 +336,8 @@ def Bidirectional_GRU(max_len,embedding_matrix):
     return model
 
 
-# Keras vanilla bi-directional GRU model
+# Final best model with pre-trained embeddings being modified
 def bestModel(max_len, embedding_matrix):
-    # Create vannila rnn model
     model = Sequential()
     model.add(InputLayer(input_shape=(max_len,)))
     model.add(Embedding(len(vocab), 300,trainable=True))
