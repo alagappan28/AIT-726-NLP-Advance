@@ -105,7 +105,8 @@ from keras.layers import Embedding
 from keras import backend as K
 import numpy as np
 from keras import backend as K
-
+import time
+start_time = time.time()
 
 # list of tags
 tag_list_prime=['<pad>','O','B-LOC', 'B-PER','B-ORG', 'B-MISC', 'I-LOC','I-PER','I-ORG', 'I-MISC']
@@ -443,6 +444,7 @@ if __name__ == "__main__":
     x=model.predict(line_vec_test)
     packAndStore(x,r'output\bi-gru.txt')
     '''
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 
     
